@@ -20,6 +20,13 @@ from rest_framework.documentation import include_docs_urls
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 router = routers.DefaultRouter()
+#en caso de que no exista versionado las urls se definen asi
+#router.register(r'autores', AuthorViewSet)
+#router.register(r'libros', BookViewSet)
+#router.register(r'editoriales', EditorialViewSet)
+
+
+
 #Para el versionado redefinimos nuestras urls en
 #nuestra app core, desaparecen de aqui
 
