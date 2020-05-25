@@ -11,7 +11,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100, unique=True)  # unique=True Para no repetir un valor en el campo(Primera Opcion)
     authors = models.ManyToManyField(Author)
     editorial = models.ForeignKey(Editorial, on_delete=models.CASCADE)
-    date_pub = models.DateField('Fechas de publicacion', default=timezone.now())
+    date_pub = models.DateField('Fecha de publicacion', default=timezone.now())
 
     def __str__(self):
         return self.title
